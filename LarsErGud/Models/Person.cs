@@ -11,8 +11,8 @@ namespace LarsErGud.Models
     {
         private string firstName;
         private string lastName;
-        public string FirstName { get { return firstName; } set { firstName = value; OnPropertyChanged(FullName); } }
-        public string LastName { get { return lastName; } set { lastName = value; OnPropertyChanged(FullName); } }
+        public string FirstName { get { return firstName; } set { firstName = value; OnPropertyChanged("FullName"); } }
+        public string LastName { get { return lastName; } set { lastName = value; OnPropertyChanged("FullName"); } }
         public string FullName { get { return FirstName + " " + LastName; } }
 
         public event PropertyChangedEventHandler PropertyChanged;
